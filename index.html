@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <base href="/1_3021USER_ARG/">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Monter Hotel Brochure</title>
+  <style>
+    body {
+      background-color: #FA2A55;
+      color: #000000;
+      font-family: "Courier New", Courier, monospace;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 2.5em;
+      text-shadow: 0 0 5px #000000;
+    }
+    p {
+      font-size: 1.2em;
+    }
+
+    @keyframes glitch {
+      0%, 100% { text-shadow: 0 0 5px #0f0; }
+      50% { text-shadow: 2px 0 10px #0f0, -2px 0 10px #0f0; }
+    }
+
+    .glitch {
+      animation: glitch 1s infinite;
+    }
+
+    .blackout {
+      background-color: black;
+      color: black;
+      user-select: text;
+    }
+    .blackout::selection {
+      background-color: black;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="glitch">Monter Hotel Brochure</h1>
+  <p>Hey! Welcome to Monter HOTEL!</p>
+  <p>This advanced brochure will guide you to explore our vast hotel, and see how many things</p>
+  <p>you can do here! Here are the many things you can <strong>DO!</strong>:</p>
+
+  <p>· Explore the water park!</p>
+  <p>· Play in the jungle gym!</p>
+  <p>· Explore the hotel rooms!</p>
+
+  <div style="position: relative; height: 500px;">
+    <img src="https://raw.githubusercontent.com/Th3V01dIsIn3vit4bl3/1_3021USER_ARG/main/docs/tnioP.png" style="position: absolute; top: 0px; right: 100px; width: 500px;">
+  </div>
+
+  <p>· And even <span class="blackout">SACRIFICE YOURSELF TO THE V0ID</span>!</p>
+</body>
+</html>
