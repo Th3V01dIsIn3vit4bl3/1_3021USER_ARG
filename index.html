@@ -4,11 +4,10 @@
   <meta charset="UTF-8" />
   <base href="/1_3021USER_ARG/">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Monter Hotel Brochure + Uh Oh Toggle</title>
+  <title>Monter Hotel Brochure</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
-    /* === Common reset and body === */
     body {
       margin: 0;
       font-family: "Courier New", Courier, monospace;
@@ -21,9 +20,8 @@
       overflow: hidden;
     }
 
-    /* === Page container style === */
-    .page {
-      display: none;
+    #main {
+      display: flex;
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
@@ -32,50 +30,40 @@
       padding: 20px 40px;
       box-sizing: border-box;
       overflow-y: auto;
-      color: black;
-    }
-
-    .active {
-      display: flex;
-    }
-
-    /* === Monter Hotel Brochure Page Styles === */
-    #main {
       background-color: #FA2A55;
       color: #000000;
     }
 
-    #main h1.glitch {
+    h1.glitch {
       font-size: 2.5em;
       margin: 0 0 20px 0;
       user-select: none;
     }
 
-    #main p {
+    p {
       font-size: 1.2em;
       margin: 0.25em 0;
     }
 
-    #main .blackout {
+    .blackout {
       background-color: black;
       color: black;
       user-select: text;
     }
 
-    #main .blackout::selection {
+    .blackout::selection {
       background-color: black;
       color: white;
     }
 
-    #main img {
+    img {
       float: right;
       width: 500px;
       margin: 0 0 10px 20px;
       max-width: 90vw;
     }
 
-    /* Button to toggle to Uh Oh */
-    #main button {
+    button {
       margin-top: 2rem;
       background: #000;
       color: #FA2A55;
@@ -92,59 +80,15 @@
       clear: both;
     }
 
-    #main button:hover {
+    button:hover {
       background-color: #222;
-    }
-
-    /* === Uh Oh Page Styles === */
-    #uhoh {
-      background: linear-gradient(135deg, #ff4e50, #f9d423);
-      font-family: 'Fredoka One', cursive;
-      color: white;
-      text-align: center;
-      justify-content: center;
-      align-items: center;
-      padding: 2rem 3rem;
-      box-sizing: border-box;
-    }
-
-    #uhoh h1 {
-      font-size: 8rem;
-      margin: 0 0 0.5rem 0;
-      text-shadow: 3px 3px 0 #b33939;
-      user-select: none;
-    }
-
-    #uhoh p {
-      font-size: 1.5rem;
-      margin: 0 0 2rem 0;
-      text-shadow: 2px 2px 0 #b33939;
-    }
-
-    #uhoh button {
-      background-color: #fff;
-      border: none;
-      padding: 1rem 2rem;
-      border-radius: 30px;
-      font-size: 1.2rem;
-      font-weight: bold;
-      cursor: pointer;
-      color: #ff4e50;
-      box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-      transition: background-color 0.3s ease, color 0.3s ease;
-      user-select: none;
-    }
-
-    #uhoh button:hover {
-      background-color: #ff4e50;
-      color: white;
     }
   </style>
 </head>
 <body>
 
   <!-- Monter Hotel Brochure Page -->
-  <section id="main" class="page active">
+  <section id="main">
     <h1 class="glitch">Monter Hotel Brochure</h1>
     <p>Hey! Welcome to Monter HOTEL!</p>
     <p>This advanced brochure will guide you to explore our vast hotel, and see how many things</p>
@@ -161,34 +105,8 @@
     <p>"I would LOVE to see you here on our grand opening! Tickets will be 50% off on Opening DAY!!"</p>
     <p> -Monter </p>
 
-    <button id="toUhOh">Uh Oh... Go to WIP Page</button>
+    <button onclick="window.location.href='Code.html'">Uh Oh... Go to WIP Page</button>
   </section>
-
-  <!-- Uh Oh Page -->
-  <section id="uhoh" class="page">
-    <h1>Uh Oh!</h1>
-    <p>Something went wrong. It seems this page is still WIP.</p>
-    <button id="backMain">Back to Brochure</button>
-  </section>
-
-<script>
-  const mainPage = document.getElementById('main');
-  const uhOhPage = document.getElementById('uhoh');
-  const toUhOhBtn = document.getElementById('toUhOh');
-  const backMainBtn = document.getElementById('backMain');
-
-  toUhOhBtn.addEventListener('click', () => {
-    mainPage.classList.remove('active');
-    uhOhPage.classList.add('active');
-    window.scrollTo(0, 0);
-  });
-
-  backMainBtn.addEventListener('click', () => {
-    uhOhPage.classList.remove('active');
-    mainPage.classList.add('active');
-    window.scrollTo(0, 0);
-  });
-</script>
 
 </body>
 </html>
