@@ -1,111 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <base href="/1_3021USER_ARG/">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Monter Hotel Brochure</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Main + Uh Oh Page</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
-    body {
-      margin: 0;
-      font-family: "Courier New", Courier, monospace;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #FA2A55;
-      color: #000;
-      overflow: hidden;
-    }
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #222;
+    color: #eee;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    #main {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
-      height: 100vh;
-      width: 100vw;
-      padding: 20px 40px;
-      box-sizing: border-box;
-      overflow-y: auto;
-      background-color: #FA2A55;
-      color: #000000;
-    }
+  #main {
+    background: #222;
+    text-align: center;
+  }
 
-    h1.glitch {
-      font-size: 2.5em;
-      margin: 0 0 20px 0;
-      user-select: none;
-    }
+  #main h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
 
-    p {
-      font-size: 1.2em;
-      margin: 0.25em 0;
-    }
+  #main button {
+    background: #ff4e50;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 1rem 2rem;
+    font-size: 1.3rem;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(255, 78, 80, 0.6);
+    transition: background-color 0.3s ease;
+  }
 
-    .blackout {
-      background-color: black;
-      color: black;
-      user-select: text;
-    }
-
-    .blackout::selection {
-      background-color: black;
-      color: white;
-    }
-
-    img {
-      float: right;
-      width: 500px;
-      margin: 0 0 10px 20px;
-      max-width: 90vw;
-    }
-
-    button {
-      margin-top: 2rem;
-      background: #000;
-      color: #FA2A55;
-      border: none;
-      padding: 1rem 2rem;
-      border-radius: 12px;
-      font-size: 1.3rem;
-      font-weight: bold;
-      cursor: pointer;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.6);
-      transition: background-color 0.3s ease;
-      user-select: none;
-      align-self: center;
-      clear: both;
-    }
-
-    button:hover {
-      background-color: #222;
-    }
-  </style>
+  #main button:hover {
+    background: #f96262;
+  }
+</style>
 </head>
 <body>
 
-  <!-- Monter Hotel Brochure Page -->
+  <!-- MAIN PAGE -->
   <section id="main">
-    <h1 class="glitch">Monter Hotel Brochure</h1>
-    <p>Hey! Welcome to Monter HOTEL!</p>
-    <p>This advanced brochure will guide you to explore our vast hotel, and see how many things</p>
-    <p>you can do here! Here are the many things you can <strong>DO!</strong>:</p>
-
-    <div>
-      <img src="https://raw.githubusercontent.com/Th3V01dIsIn3vit4bl3/1_3021USER_ARG/main/image.png" alt="Hotel Image" />
-      <p>· Explore the water park!</p>
-      <p>· Play in the jungle gym!</p>
-      <p>· Explore the hotel rooms!</p>
-      <p>· And even <span class="blackout">SACRIFICE YOURSELF TO THE V0ID</span>!</p>
-    </div>
-
-    <p>"I would LOVE to see you here on our grand opening! Tickets will be 50% off on Opening DAY!!"</p>
-    <p> -Monter </p>
-
-    <button onclick="window.location.href='Code.html'">Uh Oh... Go to WIP Page</button>
+    <h1>Welcome to the Main Page!</h1>
+    <!-- Redirects to Code.html on click -->
+    <button id="toUhOh" onclick="window.location.href='Code.html'">Go to Uh Oh Page</button>
   </section>
 
 </body>
